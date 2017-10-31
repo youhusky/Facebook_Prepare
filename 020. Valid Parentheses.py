@@ -9,6 +9,7 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
+        
         dic = {')':'(', ']':'[', '}':'{'}
         stack = []
         for each_char in s:
