@@ -31,13 +31,16 @@ class Solution(object):
             if char.isdigit():
                 curnum = curnum*10 + int(char)
             elif char == '[':
+                # save
                 stack.append(curnum)
                 stack.append(curstring)
+                # init
                 curstring = ""
                 curnum = 0
             elif char == ']':
                 prevstring = stack.pop()
                 prenumber = stack.pop()
+                # imp
                 curstring = prevstring+prenumber*curstring
             else:
                 curstring += char
