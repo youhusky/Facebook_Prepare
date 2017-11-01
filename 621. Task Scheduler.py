@@ -55,6 +55,30 @@ def leastInterval2(tasks, n):
 	return slot
 
 def leastInterval3(tasks, n):
+	# many tasks and little slot-n
+	if not tasks:
+		return 0
+	dic = {}
+	slot = 0
+	# init queue -with size n
+	queue = []
+	for each in tasks:
+		if each in dic and dic[each] > slot:
+			# update
+			slot = dic[each]
+		
+	# del irrelevent task only save recent task
+		if len(queue) == n+1:
+			irrelevent = queue.pop(0)
+			del(dic[irrelevent])
+		queue.append(each)
+		dic[each] = slot + 1 + n
+		slot += 1
+	return slot
+
+print leastInterval3([1,2,3,4,5,6,1,2],2)
+
+def leastInterval4(tasks, n):
 	# with order print
 	if not tasks:
 		return 0
