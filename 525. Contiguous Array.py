@@ -24,6 +24,7 @@ class Solution(object):
         # init
         dic[0] = -1
         for i in range(len(nums)):
+
             if nums[i] == 0:
                 zero += 1
             else:
@@ -32,4 +33,8 @@ class Solution(object):
                 res = max(res, i - dic[zero-one])
             else:
                 dic[zero-one] = i
+            print i,dic
         return res
+test = [1,0,0,0,0,1,1,1]
+m = Solution()
+print m.findMaxLength(test)
