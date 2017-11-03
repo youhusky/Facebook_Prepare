@@ -66,12 +66,14 @@ class RandomizedSet(object):
         if val not in self.dic:
             return False
         
-        if val != self.array[-1]:
-            swapitem = self.array[-1]
-            index = self.dic[val]
+        index = self.dic[val]
+
+        if index < len(self.array)-1:
+
+            last_item = self.array[-1]
             
-            self.array[index] = swapitem
-            self.dic[swapitem] = index
+            self.array[index] = last_item
+            self.dic[last_item] = index
           
             
             
@@ -94,6 +96,85 @@ class RandomizedSet(object):
 
 # Your RandomizedSet object will be instantiated and called as such:
 # obj = RandomizedSet()
+# param_1 = obj.insert(val)
+# param_2 = obj.remove(val)
+# param_3 = obj.getRandom()
+
+ 
+# Add to List
+# 381. Insert Delete GetRandom O(1) - Duplicates allowed
+
+# Note: Duplicate elements are allowed.
+
+# 146
+import random
+class RandomizedCollection(object):
+
+    def __init__(self):
+        """
+        Initialize your data structure here.
+        """
+        self.dic ={}
+        self.array = []
+
+    def insert(self, val):
+        """
+        Inserts a value to the collection. Returns true if the collection did not already contain the specified element.
+        :type val: int
+        :rtype: bool
+        """
+        
+        if val not in self.dic:
+            self.dic[val] = set()
+            self.dic[val].add(len(self.array))
+            self.array.append(val)
+            return True
+        else:
+            self.dic[val].add(len(self.array))
+            self.array.append(val)
+            
+            return False
+        
+
+    def remove(self, val):
+        """
+        Removes a value from the collection. Returns true if the collection contained the specified element.
+        :type val: int
+        :rtype: bool
+        """
+        if val not in self.dic:
+            return False
+        
+        index = self.dic[val].pop() # remove first item with index
+        
+        # compare the dic[val] -- max value whether equals to the last index of the self.array
+        if index < len(self.array)-1:
+           
+            last_item = self.array[-1]
+            self.array[index] = last_item
+            
+            self.dic[last_item].remove(len(self.array)-1)
+            
+            self.dic[last_item].add(index)
+            
+            
+        self.array.pop()
+        if not self.dic[val]:
+            del(self.dic[val])
+        return True
+        
+
+    def getRandom(self):
+        """
+        Get a random element from the collection.
+        :rtype: int
+        """
+        return self.array[random.randint(0,len(self.array)-1)]
+        
+
+
+# Your RandomizedCollection object will be instantiated and called as such:
+# obj = RandomizedCollection()
 # param_1 = obj.insert(val)
 # param_2 = obj.remove(val)
 # param_3 = obj.getRandom()
