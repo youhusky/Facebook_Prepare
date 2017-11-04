@@ -153,8 +153,10 @@ class RandomizedCollection(object):
             last_item = self.array[-1]
             self.array[index] = last_item
             
+            # last item - index delete
             self.dic[last_item].remove(len(self.array)-1)
-            
+
+            # add new index which belonged to pop()
             self.dic[last_item].add(index)
             
             
