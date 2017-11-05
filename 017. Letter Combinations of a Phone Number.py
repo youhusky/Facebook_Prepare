@@ -37,6 +37,7 @@ class Solution(object):
             return
 
         # focus on !
+        # digits[num] -> 2: generate a,b,c
         for letter in dic[digits[num]]:
             self.dfs(res, temp+letter, dic, digits, num+1)
             

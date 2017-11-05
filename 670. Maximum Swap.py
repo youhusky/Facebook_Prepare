@@ -10,15 +10,27 @@
 # Explanation: No swap.
 # Note:
 # The given number is in the range [0, 108]
+
+#Greedy
 class Solution(object):
     def maximumSwap(self, num):
-        A = map(int, str(num))
-        last = {x: i for i, x in enumerate(A)}
-        print last
-        for i, x in enumerate(A):
-            for d in xrange(9, x, -1):
-                if last.get(d, None) > i:
-                    A[i], A[last[d]] = A[last[d]], A[i]
-                    return int("".join(map(str, A)))
-        return num
+        count = [0 for _ in  range(10)]
+        
+        num = map(int, str(num))
+        #print num
+        for n in range(len(num)):
+            count[num[n]] =n
+            
+        for i in range(len(num)):
+            for j in range(9,num[i],-1):
+                if count[j] > i:
+                    num[i], num[count[j]] = num[count[j]], num[i]
+                    return int("".join(map(str, num)))
+        res = ""
+        for i in num:
+            res += str(i)
+        return int(res)
+                
+        
+        
         
