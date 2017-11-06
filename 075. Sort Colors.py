@@ -25,3 +25,29 @@ class Solution(object):
                 blue -= 1
             else:
                 i += 1
+
+    def sortCate(self, nums):
+        def cate(n):
+            if n < 3:
+                return 'low'
+            elif n < 6:
+                return 'medium'
+            else:
+                return 'high'
+        low, high = 0, len(nums)-1
+        i = 0
+        while i <= high:
+            if cate(nums[i]) == 'low':
+                nums[i], nums[low] = nums[low], nums[i]
+                i += 1
+                low += 1
+            elif cate(nums[i]) == 'high':
+                nums[i], nums[high] = nums[high], nums[i]
+                high -= 1
+            else:
+                i += 1
+
+m = Solution()
+test = [5,7,1,7,5,3,1,8,9,1]
+m.sortCate(test)
+print test

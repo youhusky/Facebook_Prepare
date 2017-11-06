@@ -41,3 +41,32 @@ class Solution(object):
                     l += 1
                     r -= 1
         return res
+
+    def threeSum2(self, nums):
+        def hashing(string):
+            minvalue = min(string)
+            maxvalue = max(string)
+            return str(minvalue)+str(maxvalue)
+        res = []
+        helper = set()
+        # wit dup
+        # res = []
+        if len(nums) < 3:
+            return res
+        for i in range(len(nums)):
+            dic = {}
+            for j in range(i+1,len(nums)):
+                dic[nums[j]] = j
+                if -nums[i]-nums[j] in dic:
+                    temp = (nums[i], nums[dic[- nums[i]-nums[j]]], nums[j])
+                    # IMP
+                    if hashing(temp) not in helper:
+                        helper.add(hashing(temp))
+                        res.append(temp)
+                
+        return res
+
+
+test = [-1, 0, 1, 2, -1, -4]
+m = Solution()
+print m.threeSum2(test)
