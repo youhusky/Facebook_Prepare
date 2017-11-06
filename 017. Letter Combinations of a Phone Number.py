@@ -31,15 +31,15 @@ class Solution(object):
         self.dfs(res, '',dic,digits,0)
         return res
         
-    def dfs(self, res, temp, dic,digits,num):
-        if num == len(digits):
+    def dfs(self, res, temp, dic,digits,index):
+        if index == len(digits):
             res.append(temp)
             return
 
         # focus on !
-        # digits[num] -> 2: generate a,b,c
-        for letter in dic[digits[num]]:
-            self.dfs(res, temp+letter, dic, digits, num+1)
+        # digits[index] -> 2: generate a,b,c
+        for letter in dic[digits[index]]:
+            self.dfs(res, temp+letter, dic, digits, index+1)
             
         
         

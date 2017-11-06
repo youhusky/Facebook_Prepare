@@ -57,4 +57,25 @@ class Solution(object):
         if outdegree:
             return False
         return True
+
+    def canFinish(self, n, pres):
+        
+        oud = [[] for _ in range(n)]  # indegree
+        ind = [0] * n  # outdegree
+        for succ,pre in pres:
+            ind[succ] += 1
+            oud[pre].append(succ)
+        dq = []
+        for i in range(n):
+            if ind[i] == 0:
+                dq.append(i)
+        count = 0
+        while dq:
+            pre_course = dq.pop(0)
+            count += 1
+            for succ in oud[pre_course]:
+                ind[succ] -= 1
+                if ind[succ] == 0:
+                    dq.append(succ)
+        return count == n
             

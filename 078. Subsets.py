@@ -26,6 +26,7 @@ class Solution(object):
         res = []
         self.backtracking(nums, [], res, 0)
         return res
+        
     def backtracking(self, nums, temp, res, start):
         res.append(list(temp))
         for i in range(start,len(nums)):
