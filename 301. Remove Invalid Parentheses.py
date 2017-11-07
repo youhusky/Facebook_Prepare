@@ -35,8 +35,58 @@ class Solution(object):
         		count = 0
         	i += 1
         return s
+
+    def check(self, s):
+        count = 0
+        for char in s:
+            if char == '(':
+                count += 1
+            elif char == ')':
+                count -= 1
+                if count < 0:
+                    return False
+        return count == 0
+    def removeInvalidParentheses2(self, s):
+        res = []
+        if not s:
+            return res
+        visited = set()
+        queue = []
+
+        # init
+        # deal with diplicate
+        visited.add(s)
+        queue.append(s)
+
+        flag = False
+
+        while queue:
+            t = queue.pop(0)
+            if self.check(t):
+                res.append(t)
+                
+                flag = True
+                continue
+
+            # check equal length with minimal delete times
+            # if length(t) == 5 first is true
+            # then we only need to generate length == 5 others to append res
+            if flag:
+                continue
+
+            for i in range(len(t)):
+                if t[i] != '(' and t[i] != ')':
+                    continue
+                temp = t[:i] + t[i+1:]
+                if temp in visited:
+                    continue
+                visited.add(temp)
+                queue.append(temp)
+        return res
+
+
 m = Solution()
-print m.removeInvalidParentheses(s)
+print m.removeInvalidParentheses2(s)
 
 
         
