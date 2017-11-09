@@ -30,8 +30,8 @@ class Solution(object):
                 original = int(num1[i]) * int(num2[j])
                 temp = original + pos[first_position]
                 
-                pos[second_position] += temp / 10 ## 15/10 = 5
-                pos[first_position] = temp % 10 ## 15%10 = 1
+                pos[second_position] += temp / 10 ## 15/10 = 1
+                pos[first_position] = temp % 10 ## 15%10 = 5
         res = ""
         for i in pos:
             if not res and i == 0:

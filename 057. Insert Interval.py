@@ -20,6 +20,7 @@
 class Solution(object):
     def insert(self, intervals, newInterval):
         """
+        O(n)
         :type intervals: List[Interval]
         :type newInterval: Interval
         :rtype: List[Interval]

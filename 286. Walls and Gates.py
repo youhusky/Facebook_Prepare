@@ -18,6 +18,8 @@
 class Solution(object):
     def wallsAndGates(self, rooms):
         """
+        O(mn)
+        O(mn)
         :type rooms: List[List[int]]
         :rtype: void Do not return anything, modify rooms in-place instead.
         """

@@ -15,6 +15,7 @@
 class Solution(object):
     def numDecodings(self, s):
         """
+        O(n)
         :type s: str
         :rtype: int
         """

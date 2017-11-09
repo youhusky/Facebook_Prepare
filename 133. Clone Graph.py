@@ -46,6 +46,7 @@ class Solution:
                 if children.label not in visited:
                     queue.append(children)
                     visited[children.label] = UndirectedGraphNode(children.label)
+                # save root's neighbor
                 visited[parent.label].neighbors.append(visited[children.label])
                 
         return root

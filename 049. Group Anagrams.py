@@ -57,7 +57,7 @@ class Solution(object):
             for i in range(26):
                 if count[i] != 0:
                     temp += chr(i+97) * count[i]
-            print temp
+            #print temp
             if temp not in dic:
                 dic[temp] = [word]
             else:

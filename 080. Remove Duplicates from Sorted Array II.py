@@ -9,6 +9,7 @@
 class Solution(object):
     def removeDuplicates(self, nums):
         """
+        O(n)
         :type nums: List[int]
         :rtype: int
         """

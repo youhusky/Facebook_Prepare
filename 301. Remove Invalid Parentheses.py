@@ -14,6 +14,8 @@ s = "()(()()"
 class Solution(object):
     def removeInvalidParentheses(self, s):
         """
+        O(n)
+        O(1)
         :type s: str
         :rtype: List[str]
         """

@@ -12,6 +12,7 @@
 # def read4(buf):
 
 class Solution(object):
+	# save prev buffer
     def __init__(self):
         self.__buf4 = [''] * 4
         self.__i4 = 0

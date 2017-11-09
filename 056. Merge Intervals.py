@@ -14,6 +14,7 @@
 class Solution(object):
     def merge(self, intervals):
         """
+        O(nlgn)
         :type intervals: List[Interval]
         :rtype: List[Interval]
         """

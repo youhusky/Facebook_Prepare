@@ -44,12 +44,14 @@ class Solution(object):
         endSet.add(endWord)
         while beginSet and endSet:
             count += 1
+            # change two set
             if len(beginSet) > len(endSet):
                 beginSet, endSet = endSet, beginSet
             nextSet = set()
             for each_word in beginSet:
                 for char in range(len(each_word)):
                     for i in range(26):
+                        # not the same word
                         if chr(97+i) != each_word[char]:
                             new_word = each_word[:char] + chr(97+i) + each_word[char+1:]
                             if new_word in wordList:

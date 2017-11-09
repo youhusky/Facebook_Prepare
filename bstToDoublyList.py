@@ -16,7 +16,7 @@ class DoublyListNode(object):
 class Solution(object):
  	"""docstring for Solution"""
  	def __init__(self):
- 		super(Solution, self).__init__()
+ 		
 		self.head = None
 		self.tail = None
 

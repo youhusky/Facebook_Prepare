@@ -18,6 +18,7 @@ class Solution(object):
         :rtype: bool
         """
         l, r = 0, len(s) - 1
+        # check which one need to delete
         c1, c2 = 0, 0
         while l < r:
             if s[l] != s[r]:

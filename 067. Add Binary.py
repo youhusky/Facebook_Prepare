@@ -9,6 +9,7 @@
 class Solution(object):
     def addBinary(self, a, b):
         """
+        O(min(m,n))
         :type a: str
         :type b: str
         :rtype: str

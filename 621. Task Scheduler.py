@@ -89,7 +89,7 @@ def leastInterval4(tasks, n):
 		if each in dic and dic[each] > slot:
 			# update
 			waittime = dic[each] - slot
-			res += "_" * waittime
+			res += "#" * waittime
 			slot = dic[each]
 		dic[each] = slot + 1 + n
 		res += str(each)
@@ -98,7 +98,7 @@ def leastInterval4(tasks, n):
 test = [1,2,1,1,3,4]
 print leastInterval2(test,2)
 print leastInterval3(test,2)
-print leastInterval(tasks,2)
+print leastInterval4(tasks,2)
         
                 
             
