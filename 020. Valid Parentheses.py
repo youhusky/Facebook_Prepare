@@ -5,7 +5,7 @@ class Solution(object):
     def isValid(self, s):
         """
         O(N)
-        O(1)
+        O(N)
         :type s: str
         :rtype: bool
         """
