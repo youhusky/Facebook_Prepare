@@ -41,5 +41,23 @@ class Solution(object):
         for letter in dic[digits[index]]:
             self.dfs(res, temp+letter, dic, digits, index+1)
             
-        
+class Solution2(object):
+    def letterCombinations(self, password):
+        if not password:
+            return []
+        res = []
+        dic = {'a':"12", 'c':"34"}
+        for char in password:
+            if char not in dic:
+                dic[char] = char
+        self.dfs(res, "", dic, password, 0)
+        return res
+    def dfs(self, res, temp, dic, password, index):
+        if index == len(password):
+            res.append(temp)
+            return 
+        for letter in dic[password[index]]:
+            self.dfs(res, temp+letter, dic, password, index+1)
+m = Solution2()
+print m.letterCombinations('abc')
         
