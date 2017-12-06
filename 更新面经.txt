@@ -1,0 +1,52 @@
+https://github.com/shileiwill/destination/blob/5b2b59eb070dd13232fe0e467d64655e36874b3f/Round1/src/company/facebook/WinDesign
+
+https://github.com/tongzhang1994/Facebook-Interview-Coding/blob/master/Least%20Removal%20to%20Valid%20Palindromic%20Subsequence.java
+
+第一轮 Coding
+input是一个array，要求生成一个树，有以下三个属性
+1）二叉树
+2）Min Heap，表示node的每个子节点的值都大于或者等于这个node的值
+3）做inorder traversal的时候要保持array的顺序
+. from: 1point3acres.com/bbs 
+举个例子input是 5, 2, 10, 7
+       2
+      / \
+    5   10
+           \
+            7
+
+follow up 是一个addNode的函数，输入是root node，还有个int value，保持原有的属性，返回root
+
+第二轮 System Design
+Design Facebook Search System.
+要求实现friends search和post search. visit 1point3acres.com for more.
+
+post search我说可以用inverted index，但是friends search就没有思路了。
+然后厚着脸皮说没有相关经验，然后就扯到search的web service还有typeahead ui怎么实现了
+
+第三轮 Coding
+面试官找不到房间，迟到了一会，就做了一到题目Insert Interval，但也是写的磕磕盼盼的. visit 1point3acres.com for more.
+
+第四轮 Career
+
+问了一个dot product问题，怎么存vector，vector特别大该怎么处理等等
+
+!!第五轮 System Design
+Design Instagram. visit 1point3acres.com for more.
+主要扯了一下feed的pull vs push两种方法，还问了photo storage该怎么整，又是不会。。。
+
+http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=307365&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3090%5D%5Bvalue%5D%3D1%26searchoption%5B3090%5D%5Btype%5D%3Dradio%26searchoption%5B3046%5D%5Bvalue%5D%3D2%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26sortid%3D311
+
+
+刚面完。
+店面是next permutation。.
+
+1. bahavior, 最后15分钟出了个题，. From 1point 3acres bbs
+   几个user， 每个user 在下面的时间段发了信息，找一个最短的时间窗使得每个user都发了至少一条信息。应该是利口原题吧
+   [[1,3,4,7, 10],
+    [4, 6, 8 ,10, 20],
+    [7, 15, 16, 20, 25]
+   ]. 
+2. 给一个无穷大网格，给一个起始和终点，还有一些格子是不能通过的，求起点到终点的最短距离. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+3. 利口253， 还有task题，是按顺序排列
+4. 设计download api
