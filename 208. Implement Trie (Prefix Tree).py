@@ -13,6 +13,9 @@ class TrieNode(object):
         self.nodes = defaultdict(TrieNode)  # Easy to insert new node.
         self.isword = False  # True for the end of the trie.
 
+    def __repr__(self):
+        return repr(self.nodes)
+
 
 class Trie(object):
 
@@ -63,7 +66,8 @@ class Trie(object):
 
 
 # Your Trie object will be instantiated and called as such:
-# obj = Trie()
-# obj.insert(word)
+obj = Trie()
+obj.insert('word')
+print obj.root
 # param_2 = obj.search(word)
 # param_3 = obj.startsWith(prefix)

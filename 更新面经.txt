@@ -50,3 +50,7 @@ http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=307365&extra=page%3
 2. 给一个无穷大网格，给一个起始和终点，还有一些格子是不能通过的，求起点到终点的最短距离. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
 3. 利口253， 还有task题，是按顺序排列
 4. 设计download api
+
+http://www.1point3acres.com/bbs/thread-298520-1-1.html
+
+http://www.1point3acres.com/bbs/thread-295172-1-1.html
