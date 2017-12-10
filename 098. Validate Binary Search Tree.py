@@ -35,5 +35,36 @@ class Solution(object):
         if left >= root.val or right <= root.val:
             return False
         return self.isValidBSThelper(root.left, left, root.val) and self.isValidBSThelper(root.right, root.val, right)
+ 
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def isValidBST(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        res = []
+        flag = [True]
+        self.check(root, res,flag)
+        print res
+        return True if flag[0] else False
+    def check(self,root,res,flag):
+        if not root:
+            return
+        self.check(root.left, res,flag)
+        if res and root.val <= res[-1]:
+            flag[0] = False
+            return
+        res.append(root.val)   
+        self.check(root.right, res, flag)
         
+        
+        
+               
         
