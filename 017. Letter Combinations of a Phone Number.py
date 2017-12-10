@@ -32,7 +32,7 @@ class Solution(object):
         return res
         
     def dfs(self, res, temp, dic,digits,index):
-        if index == len(digits):
+        if len(temp) == len(digits):
             res.append(temp)
             return
 

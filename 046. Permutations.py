@@ -16,18 +16,22 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-        ans = []
-        self.backtracking(nums, [], ans)
-        return ans
-    def backtracking(self, nums, temp, ans):
-        if len(nums) == len(temp):
-            ans.append(list(temp))
-        for i in range(len(nums)):
-            if nums[i] in temp:
+        res = []
+        self.backtracking(nums, res, [])
+        return res
+    def backtracking(self, nums, res, temp):
+        if len(temp) == len(nums):
+            res.append(list(temp))
+        for num in nums:
+            if num in temp:
                 continue
-            temp.append(nums[i])
-            self.backtracking(nums, temp, ans)
-            temp.pop()
+            #temp.append(num)
+            print temp
+            self.backtracking(nums,res,temp+[num])
+            #temp.pop()
+        
+m = Solution()
+print m.permute([1,2,3])
 
 class Solution(object):
 	# [1] [2,1],[1,2], [3,2,1],[2,3,1]
