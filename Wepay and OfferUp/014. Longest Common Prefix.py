@@ -1,4 +1,9 @@
+# To remove only spaces use str.replace:
 
+# sentence = sentence.replace(' ', '')
+# To remove all whitespace characters (space, tab, newline, and so on) you can use split then join:
+
+# sentence = ''.join(sentence.split())
 # Write a function to find the longest common prefix string amongst an array of strings.
 class Solution(object):
     def longestCommonPrefix(self, strs):

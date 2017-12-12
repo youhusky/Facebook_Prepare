@@ -45,3 +45,5 @@ class Solution(object):
                 dp[i] = dp[i] + dp[i-num]
             #print dp
         return dp[k]
+m = Solution()
+print m.findTargetSumWays([1,1,1,1,1],3)

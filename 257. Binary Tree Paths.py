@@ -13,11 +13,11 @@
 # Credits:
 # Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.
 # Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
 class Solution(object):
     def binaryTreePaths(self, root):
@@ -40,3 +40,4 @@ class Solution(object):
             self.helper(root.left, res, temp + '->'+str(root.left.val))
         if root.right:
             self.helper(root.right, res , temp + '->'+str(root.right.val))
+
