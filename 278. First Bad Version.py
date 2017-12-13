@@ -21,12 +21,10 @@ class Solution(object):
         :rtype: int
         """
         left,right = 1, n
-        while left < right:
+        while left +1 < right:
             mid = left + (right - left)/2
             if isBadVersion(mid):
                 right = mid
             else:
-                left = mid + 1
-        return left
-                
-        
+                left = mid 
+        return left if isBadVersion(left) else right       

@@ -1,13 +1,15 @@
 # Facebook_Prepare
 
+
 ## Freq
 
 [x] Three sum without sorted  
 [x] Task Scheduler 
 [x] 301 remove invalid parenthesis  
-[] 17 letter combination of phone  
+[x] 17 letter combination of phone  
 [x] Sort the numbers based on categories -- 075 follow up 
-[x] Binary Search templete  
+[x] Binary Search templete   
+--21
 
 ## System Design
 [] Tushar Roy

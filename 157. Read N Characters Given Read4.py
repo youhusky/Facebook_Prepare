@@ -21,7 +21,7 @@ class Solution(object):
         """
         read_bytes = 0
         buffer = [''] * 4
-        for i in xrange(n / 4 + 1):
+        for i in range(n / 4 + 1):
             size = read4(buffer)
             if size:
                 buf[read_bytes:read_bytes+size] = buffer
@@ -29,3 +29,4 @@ class Solution(object):
             else:
                 break
         return min(read_bytes, n)
+

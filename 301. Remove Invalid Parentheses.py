@@ -20,7 +20,9 @@ class Solution(object):
         :rtype: List[str]
         """
         checkforword = self.valid(s,'(',')')
+        print checkforword
         checkbackword = self.valid(checkforword[::-1],')','(')
+        print checkbackword
         return checkbackword[::-1]
     def valid(self, s, left ,right):
 
@@ -88,6 +90,7 @@ class Solution(object):
 
 
 m = Solution()
+print m.removeInvalidParentheses(s)
 print m.removeInvalidParentheses2(s)
 
 

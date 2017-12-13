@@ -25,4 +25,5 @@ class Solution(object):
     	right = self.check(root.right)
     	if left == -1 or right == -1 or abs(left-right)>1:
     		return -1
+        # left, right == 0 return 1 itself
     	return max(left, right) +1

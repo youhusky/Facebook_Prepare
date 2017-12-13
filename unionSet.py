@@ -15,6 +15,7 @@ def unionSet(nums):
 	res = []
 	visited = set()
 	queue = []
+	
 	# BFS
 	for key in graph:
 		component = []
