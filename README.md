@@ -7,7 +7,7 @@
 [x] Task Scheduler 
 [x] 301 remove invalid parenthesis  
 [x] 17 letter combination of phone  
-[x] Sort the numbers based on categories -- 075 follow up 
+[x] Sort the numbers based on categories -- 075 follow up   
 [x] Binary Search templete   
 --21
 

@@ -36,5 +36,6 @@ class Solution(object):
             for k, eleA in enumerate(row):
                 if eleA:
                     for j, eleB in enumerate(B[k]):
-                        if eleB: C[i][j] += eleA * eleB
+                        if eleB: 
+                            C[i][j] += eleA * eleB
         return C

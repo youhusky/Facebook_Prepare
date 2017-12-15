@@ -35,4 +35,4 @@ class Solution(object):
 	    head.next = None # forward cut
 	    newNode = self.reverseList(second)
 	    second.next = head # backward connect
-	    return nextNode
+	    return newNode

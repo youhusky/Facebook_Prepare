@@ -1,6 +1,8 @@
 class Solution(object):
     def nextPermutation(self, nums):
         """
+        # O(n)
+        # O(1)
         :type nums: List[int]
         :rtype: void Do not return anything, modify nums in-place instead.
         """

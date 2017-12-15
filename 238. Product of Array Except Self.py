@@ -24,3 +24,17 @@ class Solution:
             output[i] = output[i] * p
             p = p * nums[i]
         return output
+
+
+    def productexpectself(self, nums):
+        p = 1
+        n = len(nums)
+        res = []
+        for i in range(n):
+            res.append(p)
+            p *= nums[i]
+        p=1
+        for j in range(n-1,-1,-1):
+            res[j] *= p
+            p *= nums[j]
+        return res

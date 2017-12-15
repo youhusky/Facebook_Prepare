@@ -55,7 +55,7 @@ class Solution2(object):
     def dfs(self, res, temp, dic, password, index):
         if index == len(password):
             res.append(temp)
-            return 
+            return
         for letter in dic[password[index]]:
             self.dfs(res, temp+letter, dic, password, index+1)
 m = Solution2()

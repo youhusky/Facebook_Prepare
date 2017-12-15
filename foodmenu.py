@@ -18,6 +18,21 @@ def foodmenu(order, menu):
 	return res
 
 
+def food(order, menu):
+	res = defaultdict(int)
+	queue = [menu[order]]
+	# [...]
+	while queue:
+		item_list = queue.pop(0)
+		while item_list:
+			item = item_list.pop(0)
+			if type(item.values()[0]) == type(1):
+				res[item.keys()[0]] += item.values()[0]
+			else:
+				for i in item.values()[0]:
+					menu_list.append(i)
+
+
 
 
 

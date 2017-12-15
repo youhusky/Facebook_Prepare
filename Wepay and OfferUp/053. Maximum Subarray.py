@@ -5,6 +5,8 @@
 class Solution(object):
     def maxSubArray(self, nums):
         """
+        O(n)
+        O(1)
         :type nums: List[int]
         :rtype: int
         """

@@ -24,4 +24,4 @@ class Solution(object):
 		return False
 
 m = Solution()
-print m.easysubarraySum([2,5,7,-1],15)
+print m.easysubarraySum([2,5,7,-1],12)

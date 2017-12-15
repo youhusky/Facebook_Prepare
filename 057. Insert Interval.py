@@ -40,5 +40,6 @@ class Solution(object):
             else:
                 newInterval.start = min(newInterval.start, intervals[i].start)
                 newInterval.end = max(newInterval.end, intervals[i].end)
+        # imp
         res.append(newInterval)
         return res

@@ -52,7 +52,7 @@ class Solution(object):
         res = []
         flag = [True]
         self.check(root, res,flag)
-        print res
+        # print res
         return True if flag[0] else False
     def check(self,root,res,flag):
         if not root:
